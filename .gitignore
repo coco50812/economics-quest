@@ -1,0 +1,17 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+*.log
+*.tsbuildinfo
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.pdf
+*.zip
+artifacts/
+.vercel/
+.netlify/
