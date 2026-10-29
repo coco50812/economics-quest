@@ -23,7 +23,7 @@ test("new concepts, cross-chapter graph and mastery preserve legacy progress", a
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
-  await expect(page.getByText("13篇 · 4章已开放")).toBeVisible();
+  await expect(page.getByText("7篇 · 4章已开放")).toBeVisible();
   await page
     .locator(".chapter-row")
     .filter({ hasText: "弹性及其应用" })

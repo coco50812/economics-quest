@@ -4,7 +4,7 @@ test("map supports zoom, drag, collapse and unavailable chapter details", async 
 }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "知识图谱", exact: true }).click();
-  await expect(page.locator(".react-flow__node")).toHaveCount(13);
+  await expect(page.locator(".react-flow__node")).toHaveCount(7);
   await page.waitForTimeout(500);
   const viewport = page.locator(".react-flow__viewport");
   const before = await viewport.getAttribute("style");
@@ -27,7 +27,7 @@ test("map supports zoom, drag, collapse and unavailable chapter details", async 
     .getByRole("button", { name: "/ 市场如何运行", exact: true })
     .click();
   await expect(page.locator(".react-flow__node")).toHaveCount(3);
-  await page.getByRole("button", { name: "全部13篇", exact: true }).click();
+  await page.getByRole("button", { name: "全部7篇", exact: true }).click();
   await page.locator('[data-id="part-3"]').click();
   await page.locator('[data-id="chapter-7"]').click();
   await expect(

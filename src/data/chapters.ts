@@ -1,10 +1,13 @@
 export const textbook = {
-  id: "mankiw-principles-10",
-  edition: "第10版",
+  id: "mankiw-principles-7-micro",
+  edition: "第7版",
+  title: "经济学原理：微观经济学分册",
+  publisher: "北京大学出版社",
+  published: "2015-05",
   author: "N. Gregory Mankiw",
-  isbn: "9780357722718",
+  isbn: "9787301256909",
   source:
-    "https://prod.cengageasia.com/title/default/detail?isbn=9780357722718",
+    "https://github.com/coco50812/economics-quest/blob/master/README.md#内容来源与边界",
 };
 const titles = [
   "经济学十大原理",
@@ -18,7 +21,6 @@ const titles = [
   "应用：国际贸易",
   "外部性",
   "公共物品和公共资源",
-  "医疗保健经济学",
   "税制的设计",
   "生产成本",
   "竞争市场上的企业",
@@ -30,37 +32,17 @@ const titles = [
   "收入不平等与贫困",
   "消费者选择理论",
   "微观经济学前沿",
-  "一国收入的衡量",
-  "生活费用的衡量",
-  "生产与增长",
-  "储蓄、投资和金融体系",
-  "金融学的基本工具",
-  "失业",
-  "货币制度",
-  "货币增长与通货膨胀",
-  "开放经济的宏观经济学：基本概念",
-  "开放经济的宏观经济理论",
-  "总需求与总供给",
-  "货币政策和财政政策对总需求的影响",
-  "通货膨胀与失业之间的短期权衡取舍",
-  "宏观经济政策的六个争论",
 ];
 export const parts = [
-  "导论",
+  "导言",
   "市场如何运行",
-  "市场与福利",
+  "市场和福利",
   "公共部门经济学",
   "企业行为与产业组织",
   "劳动市场经济学",
   "深入研究的论题",
-  "宏观经济学的数据",
-  "长期中的真实经济",
-  "长期中的货币与物价",
-  "开放经济的宏观经济学",
-  "短期经济波动",
-  "最后的思考",
 ].map((title, i) => ({ id: i + 1, title }));
-const boundaries = [3, 6, 9, 13, 18, 21, 23, 25, 29, 31, 33, 36, 37];
+const boundaries = [3, 6, 9, 12, 17, 20, 22];
 export const chapters = titles.map((title, i) => ({
   id: i + 1,
   title,

@@ -1,6 +1,6 @@
 # 第5、6章扩展记录
 
-本次沿用原项目与界面，开放第5章「弹性及其应用」、第6章「供给、需求与政府政策」。目录仍是曼昆第10版13篇37章。新增正文、例子、主题分组与练习为原创教学内容，不宣称复现教材原文、小节措辞或授权译本。
+本次沿用原项目与界面，开放第5章「弹性及其应用」、第6章「供给、需求与政府政策」。项目目录现已按用户提供的中文版第7版微观分册核对为7篇22章；本记录中的第5、6章教学内容尚需逐项审校。新增正文、例子、主题分组与练习为原创教学内容，不宣称复现教材原文、小节措辞或授权译本。
 
 ## 知识结构
 
@@ -86,11 +86,11 @@ d、s取5/10/20，t取0—3，保持内点正价格、正数量。改变d、s以
 
 ## 教学参考
 
-章节名称与版本依据 [Cengage官方目录](https://prod.cengageasia.com/title/default/detail?isbn=9780357722718)。标准概念及模型机制交叉核对：
+当前章节名称与版本依据用户提供的《经济学原理（第7版）：微观经济学分册》PDF目录。本章包含项目原创教学摘要、案例与简化模型，尚需结合中文版第7版教材逐项核对；本内容并非教材原文。以下是原扩展开发时的辅助参考，不作为本项目教材目录或第7版正文的依据：
 
 - [OpenStax：需求与供给价格弹性](https://openstax.org/books/principles-economics-3e/pages/5-1-price-elasticity-of-demand-and-price-elasticity-of-supply)
 - [OpenStax：弹性、定价与税负归宿](https://openstax.org/books/principles-economics-3e/pages/5-3-elasticity-and-pricing)
 - [OpenStax：收入与交叉价格弹性](https://openstax.org/books/principles-economics-3e/pages/5-4-elasticity-in-areas-other-than-price)
 - [OpenStax：价格上限与下限](https://openstax.org/books/principles-economics-3e/pages/3-4-price-ceilings-and-price-floors)
 
-这些参考用于核对概念，没有以其目录冒充曼昆的小节结构，也未使用未经授权的教材全文。用户若提供所持版本的章节材料，后续可逐项对齐译名和学习顺序。
+这些参考用于核对概念，没有以其目录冒充曼昆的小节结构，也未使用未经授权的教材全文。用户现已提供第7版PDF；后续需逐项核对第5、6章译名、内容和学习顺序，本次仅修正来源说明。

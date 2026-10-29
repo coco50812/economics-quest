@@ -3,7 +3,7 @@ const make = (c: Omit<Concept, "chapter" | "provenance">): Concept => ({
   ...c,
   chapter: 5,
   provenance:
-    "原创教学内容；主题分组为本项目学习路径，并非教材小节的逐字转录。参考 Cengage 第10版章节范围与 OpenStax 弹性章节。",
+    "本章包含项目原创教学摘要、案例与简化模型，尚需结合中文版第7版教材逐项核对；本内容并非教材原文。主题分组为本项目学习路径。",
 });
 export const chapter5Concepts: Concept[] = [
   make({

@@ -165,7 +165,7 @@ function MapInner({
               setFocus("");
             }}
           >
-            全部13篇
+            全部{parts.length}篇
           </button>
           {part > 0 && (
             <button

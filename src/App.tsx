@@ -193,7 +193,7 @@ export default function App() {
           <p>
             曼昆《经济学原理》
             <br />
-            第10版 · 中文学习地图
+            {textbook.edition} · 微观经济学学习地图
           </p>
           <div className="progress-track">
             <span style={{ width: `${pct}%` }} />
@@ -310,10 +310,10 @@ export default function App() {
                 </div>
                 <div className="world-tabs">
                   <span className="selected">
-                    全书旅程 <b>37</b>
+                    微观旅程 <b>{chapters.length}</b>
                   </span>
                   <span>
-                    13篇 · {chapters.filter((c) => c.available).length}章已开放
+                    {parts.length}篇 · {chapters.filter((c) => c.available).length}章已开放
                   </span>
                   <span className="legend-dot">
                     ● 已开放　<span>● 即将开放</span>
@@ -379,7 +379,7 @@ export default function App() {
                 <div className="page-intro">
                   <span className="eyebrow">CONNECT THE IDEAS</span>
                   <h1>知识不是孤岛。</h1>
-                  <p>从13篇的鸟瞰图出发，走进章节，发现概念之间的联系。</p>
+                  <p>从{parts.length}篇的鸟瞰图出发，走进章节，发现概念之间的联系。</p>
                 </div>
                 <section className="card map-card">
                   <KnowledgeMap
@@ -772,7 +772,7 @@ export default function App() {
         <footer>
           ECONOMICS QUEST <span>保持好奇，让理解发生。</span>
           <a href={textbook.source} target="_blank" rel="noreferrer">
-            教材目录来源 ↗
+            教材版本与来源说明 ↗
           </a>
         </footer>
       </div>

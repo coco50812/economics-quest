@@ -8,9 +8,9 @@ test("world, hierarchy, knowledge testing and persistence", async ({
   await expect(
     page.getByRole("heading", { name: "世界很大，从一个「为什么」开始。" }),
   ).toBeVisible();
-  await expect(page.locator(".chapter-row")).toHaveCount(37);
+  await expect(page.locator(".chapter-row")).toHaveCount(22);
   await page.getByRole("button", { name: "知识图谱", exact: true }).click();
-  await expect(page.locator(".react-flow__node")).toHaveCount(13);
+  await expect(page.locator(".react-flow__node")).toHaveCount(7);
   await page.locator('[data-id="part-1"]').click();
   await expect(page.locator(".react-flow__node")).toHaveCount(3);
   await page.locator('[data-id="chapter-1"]').click();
@@ -27,7 +27,7 @@ test("world, hierarchy, knowledge testing and persistence", async ({
   await page.reload();
   await expect(page.locator(".status-badge")).toContainText("已掌握");
   await expect(
-    page.getByRole("heading", { name: "机会成本", exact: true, level: 1 }),
+    page.getByRole("heading", { name: "某种东西的成本是为了得到它所放弃的东西（机会成本）", exact: true, level: 1 }),
   ).toBeVisible();
   await page.getByRole("button", { name: "经济学世界", exact: true }).click();
   await page
