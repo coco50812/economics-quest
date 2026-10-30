@@ -22,7 +22,7 @@ test("map supports zoom, drag, collapse and unavailable chapter details", async 
   await page.locator('[data-id="part-2"]').click();
   await expect(page.locator(".react-flow__node")).toHaveCount(3);
   await page.locator('[data-id="chapter-4"]').click();
-  await expect(page.locator(".react-flow__node")).toHaveCount(11);
+  await expect(page.locator(".react-flow__node")).toHaveCount(15);
   await page
     .getByRole("button", { name: "/ 市场如何运行", exact: true })
     .click();

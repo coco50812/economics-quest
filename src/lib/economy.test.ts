@@ -59,12 +59,12 @@ describe("time and progress", () => {
   });
 });
 describe("curriculum integrity", () => {
-  it("has 7 parts,22 chapters and 43 complete concepts", () => {
+  it("has 7 parts,22 chapters and 56 complete concepts", () => {
     expect(parts).toHaveLength(7);
     expect(chapters).toHaveLength(22);
-    expect(concepts).toHaveLength(43);
+    expect(concepts).toHaveLength(56);
     expect(chapters.filter((c) => c.available).map((c) => c.id)).toEqual([
-      1, 4, 5, 6,
+      1, 3, 4, 5, 6,
     ]);
     expect(new Set(concepts.map((c) => c.id)).size).toBe(concepts.length);
     concepts.forEach((c) => {

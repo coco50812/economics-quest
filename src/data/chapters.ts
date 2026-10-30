@@ -47,6 +47,6 @@ export const chapters = titles.map((title, i) => ({
   id: i + 1,
   title,
   part: boundaries.findIndex((n) => i + 1 <= n) + 1,
-  available: [1, 4, 5, 6].includes(i + 1),
+  available: [1, 3, 4, 5, 6].includes(i + 1),
   textbookId: textbook.id,
 }));
