@@ -20,6 +20,9 @@ describe("elasticity and revenue", () => {
     expect(midpointElasticity(4, 60, 6, 40)).toBe(1);
     expect(midpointElasticity(6, 40, 4, 60)).toBe(1);
     expect(midpointElasticity(4, 60, 4, 60)).toBeNull();
+    expect(midpointElasticity(4, 120, 6, 80)).toBeCloseTo(1);
+    expect(midpointElasticity(2.85, 9000, 3.15, 11000)).toBeCloseTo(2);
+    expect(midpointElasticity(3.15, 11000, 2.85, 9000)).toBeCloseTo(2);
   });
   it("retains baseline across elasticities", () => {
     for (const e of [0.5, 1, 2]) expect(elasticDemand(4, e)).toBe(60);
@@ -182,7 +185,7 @@ describe("additive curriculum and legacy progress compatibility", () => {
   });
   it("requires new teaching fields and valid links", () => {
     const fresh = concepts.filter((c) => [5, 6].includes(c.chapter));
-    expect(fresh).toHaveLength(22);
+    expect(fresh).toHaveLength(26);
     fresh.forEach((c) => {
       expect(c.mechanism).toBeTruthy();
       expect(c.provenance).toContain("原创");

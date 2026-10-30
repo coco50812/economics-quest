@@ -4,28 +4,28 @@
 
 ## 知识结构
 
-第5章新增13个知识点：
+第5章现有15个知识点：
 
 | 项目学习主题 | 知识点及稳定ID |
 | --- | --- |
 | 需求对价格有多敏感 | 需求价格弹性 `price-elasticity-demand`；决定因素 `elasticity-determinants`；中点法 `midpoint-method`；分类与极端情形 `elasticity-categories` |
 | 弹性如何影响收益 | 弹性与总收益 `elasticity-total-revenue`；线性需求上的弹性 `linear-demand-elasticity` |
-| 收入、相关商品与供给 | 收入弹性 `income-elasticity`；交叉价格弹性 `cross-price-elasticity`；供给价格弹性 `price-elasticity-supply`；供给调整期限 `supply-elasticity-horizon` |
+| 收入、相关商品与供给 | 收入弹性 `income-elasticity`；交叉价格弹性 `cross-price-elasticity`；供给价格弹性 `price-elasticity-supply`；供给调整期限 `supply-elasticity-horizon`；供给弹性计算 `supply-elasticity-calculation`；各种供给曲线 `supply-elasticity-curves` |
 | 将弹性带回真实问题 | 丰收与收入 `agriculture-elasticity`；石油与长短期 `oil-elasticity`；有害品政策比较 `drug-policy-elasticity` |
 
-第6章新增9个知识点：
+第6章现有11个知识点：
 
 | 项目学习主题 | 知识点及稳定ID |
 | --- | --- |
-| 价格管制的后果 | 上限 `price-ceiling`；下限 `price-floor`；非价格配给 `nonprice-rationing` |
+| 价格管制的后果 | 上限 `price-ceiling`；下限 `price-floor`；非价格配给 `nonprice-rationing`；价格管制评价 `price-control-evaluation` |
 | 从商品到住房与劳动 | 租金管制 `rent-control`；竞争市场最低工资分析 `minimum-wage` |
-| 税收由谁承担 | 单位税与楔子 `unit-tax`；卖者税 `seller-tax`；买者税 `buyer-tax`；弹性与税负归宿 `tax-incidence` |
+| 税收由谁承担 | 单位税与楔子 `unit-tax`；卖者税 `seller-tax`；买者税 `buyer-tax`；弹性与税负归宿 `tax-incidence`；税负归宿与公平判断 `tax-equity` |
 
 每个新增概念都有双语名、直觉、定义、核心机制、公式/条件、案例、误区、独立练习和关系。`mechanism`、`provenance`是Concept的可选扩展字段，旧内容不需要迁移。
 
-## 新增38条关系
+## 47条章节关系
 
-各新章节数据文件分别提供19条关系，追加到原有关系集合。旧节点及旧关系均保留。典型路径：
+第5章数据提供25条关系，第6章提供22条关系，追加到原有关系集合。旧节点及旧关系均保留。典型路径：
 
 - 需求定律 → 需求价格弹性 → 中点法/总收益。
 - 供给定律 → 供给价格弹性 → 调整期限 → 石油反应。
@@ -68,7 +68,7 @@ d、s取5/10/20，t取0—3，保持内点正价格、正数量。改变d、s以
 ## 进度兼容与限制
 
 - 保留 `economics-quest:v1` 和 version=1；不清理任何用户存储。
-- 原来的已浏览、已掌握、任务、答题记录原样可读。新增知识自动参与分母：从21变成43，因此总百分比可能下降，已掌握数量没有减少。
+- 原来的已浏览、已掌握、任务、答题记录原样可读。新增知识自动参与分母：本轮从56变成60，因此总百分比可能下降，已掌握数量没有减少。
 - 新任务ID为 `elasticity-revenue`、`policy-council`。互动题成绩存于 `results` 的 `quest:*` ID，不把任务ID写进概念掌握集合。
 - 仅追加新页面到最近位置白名单。新增Concept字段可选，无破坏性模式变更。
 - 游戏/实验进行中的滑块与步骤仍不跨刷新保存；完成徽章、练习结果与页面位置保存。旧关卡流程不改动。
@@ -82,7 +82,7 @@ d、s取5/10/20，t取0—3，保持内点正价格、正数量。改变d、s以
 
 ## 验证
 
-26项单元测试、9条Edge端到端测试。覆盖经济恒等式、参数范围、边界状态、旧ID保留、旧进度兼容、新概念掌握、新任务完成/错误分支/刷新保存、跨章关系与手机布局，以及原面包城和原图谱回归。另运行TypeScript与Vite生产构建，并检查桌面/手机截图及控制台。
+26项单元测试、12条Edge端到端测试。覆盖经济恒等式、参数范围、边界状态、旧ID保留、旧进度兼容、新概念掌握、新任务完成/错误分支/刷新保存、跨章关系与手机布局，以及原面包城和原图谱回归。另运行TypeScript与Vite生产构建，并检查桌面/手机截图及控制台。
 
 ## 教学参考
 
@@ -94,3 +94,9 @@ d、s取5/10/20，t取0—3，保持内点正价格、正数量。改变d、s以
 - [OpenStax：价格上限与下限](https://openstax.org/books/principles-economics-3e/pages/3-4-price-ceilings-and-price-floors)
 
 这些参考用于核对概念，没有以其目录冒充曼昆的小节结构，也未使用未经授权的教材全文。用户现已提供第7版PDF；后续需逐项核对第5、6章译名、内容和学习顺序，本次仅修正来源说明。
+
+## 本轮审查说明
+
+保留全部已发布知识点ID、关系及进度格式。新增4张卡片，修正中点法非唯一算法、点弹性与有限价格变化的区别、图表斜率口径和教材案例归属。税收公平卡片仅区分实际归宿与价值判断，系统公平原则留待第12章，未开放新章节。
+
+本地抽核PDF第120、127—128、133、154—156页：中点法例子、供给弹性图、石油期限分析、工资税与税负归宿；不代表全章逐字审校。PDF及页面图片不发布。政策页新增情景导语，实际仍为面包模型，不计算租赁、就业或长短期动态。

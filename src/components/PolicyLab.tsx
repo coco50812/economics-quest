@@ -78,14 +78,30 @@ export function PolicyLab({
     <div>
       <div className="section-heading">
         <div>
-          <span className="eyebrow">CHAPTER 06 / POLICY LAB</span>
+          <span className="eyebrow">CHAPTER 06 / 面包城政策危机</span>
           <h1>面包城的政策议事厅</h1>
         </div>
         <button className="secondary" onClick={reset}>
           ↺ 重新调查政策
         </button>
       </div>
-      <p>小镇议会提出三种方案。别急着表态，先让模型回答“会发生什么”。</p>
+      <p>
+        你是面包城的临时经济政策顾问。市长交来三桩紧急事件：房租上涨、工资争议、面包征税。
+        先用面包市场实验理解价格管制与税负，再把机制用于讨论房租与工资。
+      </p>
+      <section className="card">
+        <span className="eyebrow">三桩政策事件 · 先预测，再实验，后解释</span>
+        <p>
+          <b>① 房租危机</b>：房租飞涨，市长考虑价格上限。判断限价是否有约束力，预测短缺与非价格配给；短期与长期的区别可结合租金管制知识卡讨论。
+        </p>
+        <p>
+          <b>② 工资争议</b>：工人要求提高最低工资。把价格下限映射到劳动市场，识别劳动供给与需求，判断有约束力的最低工资。
+        </p>
+        <p>
+          <b>③ 税收风波</b>：市政府对面包征单位税。比较买者与卖者汇缴，观察买方总支付、卖方净得与税负分配。
+        </p>
+        <p className="muted">下方图表均为面包市场，单位是元/个、个/日；房租与工资是迁移思考情景，实验不计算住房套数、就业人数或长短期变化。</p>
+      </section>
       <div className="experiment-tabs" aria-label="政策实验类型">
         {(
           [

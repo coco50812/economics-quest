@@ -30,7 +30,7 @@ test("new concepts, cross-chapter graph and mastery preserve legacy progress", a
     .click();
   await expect(
     page.locator(".concept-tile").filter({ has: page.locator("h3") }),
-  ).toHaveCount(13);
+  ).toHaveCount(15);
   await page
     .locator(".concept-tile")
     .filter({
@@ -44,7 +44,7 @@ test("new concepts, cross-chapter graph and mastery preserve legacy progress", a
   await page.getByRole("button", { name: "知识图谱", exact: true }).click();
   await page.getByLabel("搜索知识点").fill("弹性与税负归宿");
   await page.getByRole("button", { name: "定位 ↗" }).click();
-  await expect(page.locator(".react-flow__node")).toHaveCount(9);
+  await expect(page.locator(".react-flow__node")).toHaveCount(11);
   await page.getByLabel("显示跨章节关联（虚线边框节点）").check();
   await expect(
     page.locator('[data-id="price-elasticity-demand"]'),
@@ -194,4 +194,28 @@ test("new experiments remain usable on mobile", async ({ page }) => {
       ),
     ).toBe(true);
   }
+});
+
+
+test("added chapter 5 and 6 cards can be mastered and restored", async ({ page }) => {
+  await page.goto("/");
+  for (const item of [
+    { name: "供给价格弹性的计算", answer: "A 2", id: "supply-elasticity-calculation" },
+    { name: "各种供给曲线", answer: "A 竖直的完全无弹性曲线", id: "supply-elasticity-curves" },
+    { name: "对价格管制的评价", answer: "B 约束力、供求后果、受益与受损群体及长短期效果", id: "price-control-evaluation" },
+    { name: "税负归宿与公平判断", answer: "B 不能，还要分析劳动供求弹性与工资调整", id: "tax-equity" },
+  ]) {
+    await page.getByRole("button", { name: "知识图谱", exact: true }).click();
+    await page.getByLabel("搜索知识点").fill(item.name);
+    await page.getByRole("button", { name: "定位 ↗" }).click();
+    await expect(page.locator(`[data-id="${item.id}"]`)).toBeAttached();
+    await page.getByRole("button", { name: "阅读知识卡与测试" }).click();
+    await page.getByRole("button", { name: item.answer, exact: true }).click();
+    await page.reload();
+    await expect(page.locator(".status-badge")).toContainText("已掌握");
+  }
+  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("economics-quest:v1")!));
+  expect(saved.mastered).toEqual(expect.arrayContaining([
+    "supply-elasticity-calculation", "supply-elasticity-curves", "price-control-evaluation", "tax-equity",
+  ]));
 });
